@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aura</title>
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
 </head>
 
 <nav>
-
     <div class="navegador">
         <div>
             <!-- <img src="img/Aura2.png" alt="Logo Aura" width="200" height="65" style="border-radius:20px; margin-left: 10px;"> -->
-             <a href="" class="logo">Aura</a>
+            <a href="" class="logo">Aura</a>
         </div>
 
         <div class="enlaces">
@@ -29,8 +28,28 @@
 </nav>
 
 <body>
+    <div class="text-carrusel">
+        <div class="text-wrapper">
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <!-- Duplicar los textos para continuidad -->
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+            <div class="text-slide">⚠️PÁGINA WEB EN DESARROLLO⚠️</div>
+        </div>
+    </div>
 
 
+
+
+    <div class="carrusel_imagenes">
+
+    </div>
 
 </body>
 
@@ -44,15 +63,15 @@
 <style>
     body {
         background-color: #FFF0C9;
-        font-family: Arial, sans-serif;
-        margin: 0;    
+        margin: 0;
         padding: 0;
+        font-family: 'dm-sans', sans-serif;
     }
 
     nav {
         background-color: #8f4c00;
         height: 75px;
-        
+
     }
 
 
@@ -81,8 +100,17 @@
             text-decoration: none;
             margin: 0 10px;
             font-size: 20px;
+
+        }
+
+        a:hover {
+
+            color: black;
+            transition: color 0.2s ease-in-out;
+            text-shadow: 2px 2px 20px #000000;
         }
     }
+
     footer {
         background-color: #8f4c00;
         color: white;
@@ -104,7 +132,7 @@
     }
 
     @media (max-width: 410px) {
-       
+
         .enlaces {
             display: flex;
             flex-direction: column;
@@ -116,4 +144,47 @@
         }
     }
 
+
+
+    /*Carrusel texto*/
+
+    /* Contenedor del carrusel */
+    .text-carrusel {
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #333;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #fff;
+
+    }
+
+    /* Contenedor interno que desliza los textos */
+    .text-wrapper {
+        display: inline-flex;
+        animation: scroll 40s linear infinite;
+    }
+
+    /* Cada elemento de texto */
+    .text-slide {
+        display: inline-block;
+        padding: 0 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    /* Animación del carrusel */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+            /* Inicia en la posición inicial */
+        }
+
+        100% {
+            transform: translateX(-100%);
+            /* Desplaza completamente hacia la izquierda */
+        }
+    }
 </style>
